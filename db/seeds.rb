@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create([
+User.create!([
   { email: 'moderator@test.com', password: 'pass987$', first_name: 'Moderator' },
   { email: 'user_1@test.com', password: 'pass12#', first_name: 'User one' },
   { email: 'user_2@test.com', password: 'pass27#', first_name: 'User two' }
@@ -14,21 +14,21 @@ User.create([
 
 moderator = User.find_by(first_name: :Moderator)
 
-categories = Category.create([
+categories = Category.create!([
                                { title: 'Информатика' },
                                { title: 'Языки програмирования' },
-                               { title: 'Операционные системы' } 
-                             ]) 
-tests = Test.create([
+                               { title: 'Операционные системы' }
+                             ])
+tests = Test.create!([
                       { title: 'Информатика, Информационные технологии', category_id: categories[0].id, author_id: moderator.id },
                       { title: 'Аппаратное обеспечение ЭВМ', level: 1, category_id: categories[0].id, author_id: moderator.id },
-                      { title: 'Язык Си', category_id: categories[1].id, author_id: moderator.id },                      
+                      { title: 'Язык Си', category_id: categories[1].id, author_id: moderator.id },
                       { title: 'Lunix', level: 1, category_id: categories[2].id, author_id: moderator.id },
                       { title: 'Windows', level: 1, category_id: categories[2].id, author_id: moderator.id }
                     ])
 
 
-questions = Question.create([
+questions = Question.create!([
                               { body: 'Один Килобайт равен?', test_id: tests[0].id },
                               { body: 'Минимальная единица количества информации называется?', test_id: tests[0].id },
                               { body: 'BIOS хранится?', test_id: tests[1].id },
@@ -41,7 +41,7 @@ questions = Question.create([
                             ])
 
 
-Answer.create([
+Answer.create!([
                 { body: '720 байтам', question_id: questions[0].id },
                 { body: '1024 байтам', correct: true, question_id: questions[0].id },
                 { body: '1000 байтам',  question_id: questions[0].id },
@@ -81,4 +81,3 @@ Answer.create([
                 { body: 'одной из оболочек операционной системы MS DOS', correct: true, question_id: questions[8].id },
                 { body: 'текстового редактора', question_id: questions[8].id }
               ])
-
