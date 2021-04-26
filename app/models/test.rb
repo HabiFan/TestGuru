@@ -7,7 +7,7 @@ class Test < ApplicationRecord
 
   class << self
     def tests_by_categories(title)
-      joins('INNER JOIN categories ON tests.category_id = categories.id')
+      joins(:category)
       .where(categories: { title: title })
       .order(title: :desc).pluck(:title)
     end
