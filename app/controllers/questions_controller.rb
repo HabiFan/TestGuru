@@ -5,20 +5,12 @@ class QuestionsController < ApplicationController
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
-  def index
-    render inline: "<h1>Тест: <%= @test.title %></h1>
-                    <h3>Список вопросов</h3> 
-                    <ol><% @test.questions.find_each do |question| %>
-                    <li><%= question.body %></li><% end %></ol>"  
+  def index; end
 
-  end
-
-  def new
-    
-  end
+  def new; end
 
   def create
-    question = @test.questions.create(question_params)
+    question = @test.questions.build(question_params)
     if question.save
       render plain: "Вопрос создан успешно!"
     else
@@ -31,11 +23,7 @@ class QuestionsController < ApplicationController
   end
 
   def destroy
-    if @question.destroy
-      render plain: "Вопрос удален успешно!"
-    else
-      render plain: "Что-то пошло не так!"
-    end
+    @question.destroy    
   end
 
   private
