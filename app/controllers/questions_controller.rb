@@ -1,29 +1,38 @@
 class QuestionsController < ApplicationController
 
-  before_action :set_test, only: [:index, :new, :create]
-  before_action :set_question, only: [:show, :destroy]
+  before_action :set_test, only: [:new, :create]
+  before_action :set_question, only: [:edit, :update, :show, :destroy]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
-  def index; end
+  def new
+    @question = @test.questions.new
+  end
 
-  def new; end
+  def edit; end
+
+  def show; end
 
   def create
     question = @test.questions.build(question_params)
     if question.save
-      render plain: "Вопрос создан успешно!"
+      redirect_to test_path(@test)
     else
-      render plain: "Что-то пошло не так!"
+      render :new
     end
   end
 
-  def show
-    render inline: '<%= @question.body %>>'
+  def update
+    if @question.update(question_params)
+      redirect_to test_path(@question.test)
+    else
+      render :edit
+    end
   end
 
   def destroy
-    @question.destroy    
+    @question.destroy
+    redirect_to test_path(@question.test)
   end
 
   private
