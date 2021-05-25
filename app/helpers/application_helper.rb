@@ -6,6 +6,6 @@ module ApplicationHelper
   end
 
   def current_date_year
-    Time.now.strftime("%Y")
+    Date.current.strftime("%Y")
   end
 end
