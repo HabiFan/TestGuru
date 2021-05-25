@@ -1,8 +1,0 @@
-<h1>Тест: <%= @test.title %></h1>
-<h3>Список вопросов</h3> 
-<ol>
-  <% @test.questions.find_each do |question| %>
-    <li>
-      <%= question.body %>
-    </li>
-  <% end %></ol>
