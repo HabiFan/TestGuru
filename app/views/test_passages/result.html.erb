@@ -1,1 +1,9 @@
 <h1>The <%= @test_passage.test.title %> Test was Completed!</h1>
+
+<% if @test_passage.total_percent_correct_answers > 85 %>
+  <h2 class=passed>Test passed</h2>
+<% else %>
+  <h2 class=failed>Test failed</h2>
+<% end %>
+
+<p><%= link_to 'Tests', tests_path %>
