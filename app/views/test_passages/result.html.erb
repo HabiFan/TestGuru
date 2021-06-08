@@ -1,0 +1,4 @@
+<h1>The <%= @test_passage.test.title %> Test was Completed!</h1>
+
+<h2 class=<%= show_test_result(@test_passage.successfull?) %>>Test <%= show_test_result(@test_passage.successfull?) %></h2>
+<p><%= link_to 'Tests', tests_path %>

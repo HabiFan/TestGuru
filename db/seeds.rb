@@ -67,8 +67,7 @@ Answer.create!([
                 { body: 'операционных систем', question: questions[5] },
                 { body: 'графических редакторов', question: questions[5] },
                 { body: 'браузеров', question: questions[5] },
-                { body: 'сред разработки', question: questions[5] },
-
+              
                 { body: 'Билл Гейтс', question: questions[6] },
                 { body: 'Линус Торвальдс', correct: true, question: questions[6] },
                 { body: 'Пол Аллен', question: questions[6] },
