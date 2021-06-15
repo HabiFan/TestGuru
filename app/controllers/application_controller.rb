@@ -3,15 +3,16 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   helper_method :current_user,
-                :logged_in?
+                :logged_in?,
+                :flash_status_text
 
   private
 
   def authenticate_user!
     unless current_user
-      redirect_to login_path, alert: 'Are you a Guru? Verify your Email and Password please'
+      redirect_to login_path, alert: flash_status_text(:alert)
     end  
-    
+    cookies[:return_to_url] = request.url
     cookies[:email] = current_user&.email
   end
 
@@ -21,5 +22,11 @@ class ApplicationController < ActionController::Base
 
   def logged_in?
     current_user.present?    
+  end
+
+  def flash_status_text(status)
+    case status
+      when :alert then 'Are you a Guru? Verify your Email and Password please'
+    end
   end
 end

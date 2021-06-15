@@ -7,12 +7,12 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create!([
-  { email: 'moderator@test.com', password: 'pass987$', first_name: 'Moderator' },
-  { email: 'user_1@test.com', password: 'pass12#', first_name: 'User one' },
-  { email: 'user_2@test.com', password: 'pass27#', first_name: 'User two' }
+  { email: 'moderator@test.com', password: 'pass987$' },
+  { email: 'user_1@test.com', password: 'pass12#' },
+  { email: 'user_2@test.com', password: 'pass27#' }
 ])
 
-moderator = User.find_by(first_name: :Moderator)
+moderator = User.first
 
 categories = Category.create!([
                                { title: 'Информатика' },

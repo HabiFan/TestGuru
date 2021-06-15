@@ -5,10 +5,11 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.naew(user_params)
+    @user = User.new(user_params)
 
     if @user.save
-      redirect_to test_path
+      session[:user_id] = @user.id
+      redirect_to tests_path
     else
       render 'new'
     end    

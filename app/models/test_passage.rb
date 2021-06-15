@@ -8,6 +8,8 @@ class TestPassage < ApplicationRecord
   before_validation :before_validation_set_first_question, on: :create
   before_validation :before_validation_set_next_question, on: :update
 
+  scope :by_level, ->(level) { joins(:test).where(tests: { level: level }) }
+
   def current_question_number(current_question)
     test.questions.order(:id).pluck(:id).index(current_question.id) + 1
   end
