@@ -6,6 +6,123 @@ ru:
         restrict_dependent_destroy:
           has_one: 'Невозможно удалить запись, так как существует зависимость: %{record}'
           has_many: 'Невозможно удалить запись, так как существуют зависимости: %{record}'
+    models:
+      answer: "Ответ"
+      question: "Вопрос"
+      test: "Тест"
+    attributes:
+      answer:
+        body: "Ответ"
+        correct: "Правильный"
+      question:
+        body: "Вопрос"
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+      user:
+        first_name: "Фамилия"
+        last_name: "Имя"
+        email: "Почта"
+        password: "Пароль"
+        remember_me: "Запомнить меня"
+  show: "Просмотр"
+  edit: "Редактировать"
+  delete: "Удалить"
+  sure?: "Вы действительно хотите удалить?"
+  back: "Назад"
+  logout: "Выход"
+  sign_up: "Регистрация"
+  login: "Вход"
+  navbar:
+    all_tests: "Все тесты"
+    welcome: "Добро пожалывать"
+    admin_title: "Панель администратора"
+  layouts:
+    footer:
+      info: "Проект проходження теста"
+      school_info: "Начальний проект в онлайн-школы Thinknetica"
+    admin:
+      html_title: "Панель администратора"
+  admin:
+    answers:
+      show:
+        correct: "Правильный"
+        answer: "Ответ"
+        header: "Ответ на вопрос: %{body}"
+      new:
+        header: "Новый ответ"
+      edit:
+        header: "Редактирования ответа"
+    questions:
+      form:
+        header_new: "Новый вопрос для теста %{title}"
+        header_edit: "Редактирование вопроса для теста %{title}"
+      show:
+        header: "Вопрос для теста %{title}"
+        answers: "Ответ"
+        new_answer: "Новый ответ"
+      destroy:
+        deleted: "Вопрос удачно удален"
+    tests:
+      form:
+        create_test: "Новый тест"
+        edit_test: "Редактирование теста"
+      test:
+        test_title: "Тест %{title}"
+      index:
+        all_tests: "Все тесты"
+        new_test: "Новый тест"
+        test: "Тест"
+        level: "Уровень"
+        questions: "Вопросы"
+        count_questions: "Кол-во вопросов"
+        author: "Автор"
+        actions: "Действия"
+      show:
+        new_question: "Новый вопрос"
+        question: "Вопрос"
+        actions: "Действия"
+        level: "Уровень"
+        header: "Тест %{title}"
+      test_questions:
+        questions: "Вопросы"
+        new_question: "Новый вопрос"
+        body: "Вопрос"
+        actions: "Действия"
+  shared:
+    errors:
+      header:
+        few: "Выявлено %{count} ошибки"
+        many: "Выявлено %{count} ошибок"
+        one: "Выявлено %{count} ошибка"
+        other: "Выявлено %{count} ошибок"
+  test_passages:
+    result:
+      completed_test: "Тест %{title} ззавершен"
+      correct_percent: "Вы ответили правильно на %{percent} вопросов"
+      test_passed: "Тест пройдено"
+      test_failed: "Тест не пройден"
+      all_tests: "Все тесты"
+    show:
+      header: "Проходжение теста %{title}"
+      question_number: "вопрос %{q_number}/%{q_count}"
+      next: "Дальше"
+  tests:
+    index:
+      all_tests: "Все тесты"
+      test: "Тест"
+      level: "Уровень"
+      count_questions: "Кол-во вопросов"
+      actions: "Действия"
+      questions: "Вопрос"
+    test:
+      test_title: "Тест %{title}"
+      start: "Старт"
+  errors:
+    access_denied: "В доступе отказано!"
+    record_not_found: "Запись не знайдено."
+  
   date:
     abbr_day_names:
     - Вс

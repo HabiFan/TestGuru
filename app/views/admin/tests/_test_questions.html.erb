@@ -1,13 +1,13 @@
-<strong>Test Questions</strong>
+<strong><%= t('.questions' ) %></strong>
 
 <p>
-  <%= link_to 'New Test Question', new_admin_test_question_path(@test) %>
+  <%= link_to t('.new_question'), new_admin_test_question_path(@test) %>
 </p>
 
 <table>
   <tr>
-    <th>Body</th>
-    <th colspan="3">Action</th>
+    <th><%= t('.body') %></th>
+    <th colspan="3"><%= t('.actions') %></th>
   </tr>
 
   <%= render @test.questions %>
