@@ -5,7 +5,7 @@ ru:
         record_invalid: 'Возникли ошибки: %{errors}'
         restrict_dependent_destroy:
           has_one: 'Невозможно удалить запись, так как существует зависимость: %{record}'
-          has_many: 'Невозможно удалить запись, так как существуют зависимости: %{record}'
+          has_many: 'Невозможно удалить запись, так как существуют зависимости: %{record}'      
     models:
       answer: "Ответ"
       question: "Вопрос"
@@ -26,6 +26,7 @@ ru:
         email: "Почта"
         password: "Пароль"
         remember_me: "Запомнить меня"
+
   show: "Просмотр"
   edit: "Редактировать"
   delete: "Удалить"
@@ -119,10 +120,6 @@ ru:
     test:
       test_title: "Тест %{title}"
       start: "Старт"
-  errors:
-    access_denied: "В доступе отказано!"
-    record_not_found: "Запись не знайдено."
-  
   date:
     abbr_day_names:
     - Вс
@@ -292,7 +289,11 @@ ru:
         few: "%{model}: сохранение не удалось из-за %{count} ошибок"
         many: "%{model}: сохранение не удалось из-за %{count} ошибок"
         other: "%{model}: сохранение не удалось из-за %{count} ошибки"
-  helpers:
+    access_denied: "В доступе отказано!"
+    record_not_found: "Запись не найдено"
+    question_max_answers: "Превышен лимит ответов"
+
+    helpers:
     select:
       prompt: 'Выберите: '
     submit:
