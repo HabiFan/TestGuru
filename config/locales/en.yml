@@ -31,7 +31,6 @@ en:
       test:
         title: "Name"
         category_id: "Category"
-
       user:
         email: "Email"
         password: "Password"

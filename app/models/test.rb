@@ -26,10 +26,4 @@ class Test < ApplicationRecord
       by_category(title).pluck(:title)
     end
   end
-
-  # private
-
-  # def before_validation_set_author_test
-  #   self.author_id = current_user if current_user.is_a?(Admin)    
-  # end
 end
