@@ -1,5 +1,19 @@
 ru:
   activerecord:
+    errors:
+      format: "%{attribute} %{message}"
+      access_denied: "В доступе отказано!"
+      record_not_found: "Запись не найдено"
+      question_max_answers: "Превышен лимит ответов" 
+      messages:
+        blank: "не может быть пустым"
+        equal_to: "может иметь лишь значение, равное %{count}"
+        greater_than_or_equal_to: "может иметь значение большее или равное %{count}"
+        invalid: "имеет неверное значение"
+        less_than: "может иметь значение меньшее чем %{count}"
+        less_than_or_equal_to: "может иметь значение меньшее или равное %{count}"
+        present: "нужно оставить пустым"
+        required: "не может отсутствовать"
     models:
       answer: "Ответ"
       question: "Вопрос"
@@ -113,17 +127,4 @@ ru:
     test:
       test_title: "Тест %{title}"
       start: "Старт"
-  errors:
-    format: "%{attribute} %{message}"
-    access_denied: "В доступе отказано!"
-    record_not_found: "Запись не найдено"
-    question_max_answers: "Превышен лимит ответов" 
-    messages:
-      blank: "не может быть пустым"
-      equal_to: "может иметь лишь значение, равное %{count}"
-      greater_than_or_equal_to: "может иметь значение большее или равное %{count}"
-      invalid: "имеет неверное значение"
-      less_than: "может иметь значение меньшее чем %{count}"
-      less_than_or_equal_to: "может иметь значение меньшее или равное %{count}"
-      present: "нужно оставить пустым"
-      required: "не может отсутствовать"
+
