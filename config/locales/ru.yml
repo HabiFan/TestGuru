@@ -1,6 +1,7 @@
 ru:
   activerecord:
     errors:
+      record_invalid: 'Возникли ошибки: %{errors}'
       format: "%{attribute} %{message}"
       access_denied: "В доступе отказано!"
       record_not_found: "Запись не найдено"
@@ -14,6 +15,7 @@ ru:
         less_than_or_equal_to: "может иметь значение меньшее или равное %{count}"
         present: "нужно оставить пустым"
         required: "не может отсутствовать"
+
     models:
       answer: "Ответ"
       question: "Вопрос"
