@@ -3,6 +3,7 @@
     <span class="navbar-brand"><%= t('navbar.admin_title') %></span>
     <span class="navbar-text">
       <%= t('navbar.welcome') %>, <b><%= current_user.email %></b> Guru |
+      <%= link_to 'Gists', admin_gists_path, class: 'text-dark' %> |
       <%= link_to t('logout'), destroy_user_session_path, class: 'text-dark', method: :delete %>
     </span>
   </div>
