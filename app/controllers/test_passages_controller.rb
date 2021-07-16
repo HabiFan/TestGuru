@@ -37,7 +37,7 @@ class TestPassagesController < ApplicationController
   end
 
   def link_gist(gist)
-    view_context.link_to('Gist', gist.html_url, target: '_blank')
+    link_to('Gist', gist.html_url).html_safe
   end
 end
 
