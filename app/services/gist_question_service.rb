@@ -7,11 +7,8 @@ class GistQuestionService
   end
 
   def call
-    @client.create_gist(gist_params.to_json)
-  end
-
-  def success?
-    @client.last_response.status.between?(200, 299)
+    @client.create_gist(gist_params)
+    response = @client.last_response
   end
 
   private
@@ -28,8 +25,6 @@ class GistQuestionService
   end
 
   def gist_content
-    content = [@question.body]
-    content += @question.answers.pluck(:body)
-    content.join("\n")
+    content = [@question.body, *@question.answers.pluck(:body)].join("\n")
   end
 end
