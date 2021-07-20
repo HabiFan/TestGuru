@@ -44,6 +44,7 @@ ru:
   logout: "Выход"
   sign_up: "Регистрация"
   login: "Вход"
+  gist_description: 'Вопрос %{title} с TestGur'
   navbar:
     all_tests: "Все тесты"
     welcome: "Добро пожалывать"
@@ -118,6 +119,12 @@ ru:
       header: "Проходжение теста %{title}"
       question_number: "вопрос %{q_number}/%{q_count}"
       next: "Дальше"
+      gist_question: "Отправить на gist"
+  gists:
+    create:
+      success: "Gist создан!"
+      gist_text: "Перейти созданный Gist"
+      failure: 'Что-то пошло не так, попробуйте позже'
   tests:
     index:
       all_tests: "Все тесты"

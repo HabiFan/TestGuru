@@ -8,6 +8,7 @@ en:
   logout: "Logout"
   sign_up: "Sign up"
   login: "Sign in"
+  gist_description: "A question about %{title} from TestGuru"
   navbar:
     all_tests: "All tests"
     welcome: "Welcome"
@@ -89,6 +90,12 @@ en:
       header: "Passing the test %{title}"
       question_number: "question %{q_number}/%{q_count}"
       next: "Next"
+      gist_question: "Send to the Gist"
+  gists:
+    create:
+      failure: "Error!, try again later"
+      gist_text: "Go created by Gist"
+      success: "Gist create!"
   tests:
     index:
       all_tests: "All tests"
