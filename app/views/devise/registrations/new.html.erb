@@ -1,6 +1,6 @@
 <h2><%= t('.sign_up') %></h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { id: "new_user_reg_form" }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
@@ -29,6 +29,8 @@
   <div class="field">
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password", id: "confirm_password" %>
+    <%= octicon "check", :height => 32, class: 'text-success hide' %>
+    <%= octicon "x", :height => 32, class: 'text-danger hide' %>
   </div>
 
   <div class="actions">
