@@ -1,60 +1,8 @@
-document.addEventListener('turbolinks:load', function() {
-  let control = document.querySelector('.sort-by-title')
+import { SortedTable } from './SortedTable.js'
 
-  if (control) { control.addEventListener('click', sortRowsByTitle) }
+ document.addEventListener('turbolinks:load', function () {
+   const table_id = "test_table"
+   const table = document.getElementById(table_id)
 
-})
-
-function sortRowsByTitle () {
-  let table = document.querySelector('table')
-
-  let rows = table.querySelectorAll('tr')
-  let sortedRows = []
-
-  for (var i  = 1; i < rows.length; i++) {
-    sortedRows.push(rows[i])
-  }
-
-  
-
-  if (this.querySelector('.octicon-arrow-up').classList.contains('hide')) {
-    sortedRows.sort(compareRowsAsc)
-    this.querySelector('.octicon-arrow-up').classList.remove('hide')
-    this.querySelector('.octicon-arrow-down').classList.add('hide')
-  } else {
-    sortedRows.sort(compareRowsDesc)
-    this.querySelector('.octicon-arrow-down').classList.remove('hide')
-    this.querySelector('.octicon-arrow-up').classList.add('hide')
-  }
-
-  let sortedTable = document.createElement('table')
-  let tblBody = document.createElement("tbody");
-
-  sortedTable.classList.add('table', 'table-bordered', 'mt-2')
-
-  tblBody.appendChild(rows[0])
-
-  for (var i  = 0; i < sortedRows.length; i++) {
-    tblBody.appendChild(sortedRows[i])
-  }
-  sortedTable.appendChild(tblBody)
-  table.parentNode.replaceChild(sortedTable, table)
-}
-
-function compareRowsAsc(row1, row2) {
-  let testTitle1 = row1.querySelector('td').textContent
-  let testTitle2 = row2.querySelector('td').textContent
-
-  if (testTitle1 < testTitle2) { return -1 }
-  if (testTitle1 > testTitle2) { return 1 }
-  return 0
-}
-
-function compareRowsDesc(row1, row2) {
-  let testTitle1 = row1.querySelector('td').textContent
-  let testTitle2 = row2.querySelector('td').textContent
-
-  if (testTitle1 < testTitle2) { return 1 }
-  if (testTitle1 > testTitle2) { return -1 }
-  return 0
-}
+   if (table_id != "") new SortedTable(table_id)
+ })
