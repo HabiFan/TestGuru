@@ -1,8 +1,8 @@
 import { SortedTable } from './SortedTable.js'
 
- document.addEventListener('turbolinks:load', function () {
-   const table_id = "test_table"
-   const table = document.getElementById(table_id)
+ document.addEventListener("turbolinks:load", function () {
+  const sortBy = ".sort-by-title"
+  const table = document.querySelector(sortBy)
 
-   if (table_id != "") new SortedTable(table_id)
- })
+  if (table) new SortedTable(table)
+})
