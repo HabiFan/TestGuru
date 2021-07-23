@@ -10,6 +10,9 @@ import "channels"
 import "bootstrap/dist/js/bootstrap"
 import "utilities/sortign"
 import "utilities/password_confirmation"
+import "utilities/form_inline"
+import "utilities/progress_bar"
+
 
 Rails.start()
 Turbolinks.start()

@@ -61,6 +61,8 @@ en:
       form:
         create_test: "Create new test"
         edit_test: "Edit test"
+      form_inline:
+        submit: "OK"
       test:
         test_title: "Test %{title}"
       index:
@@ -80,7 +82,7 @@ en:
       header:
         one: "Error %{count} detected"
         other: "Errors %{count} detected"
-  passing_tests:
+  test-passages:
     result:
       completed_test: "Test %{title} completed"
       correct_percent: "You gave the correct answer to %{percent} questions"
@@ -91,6 +93,7 @@ en:
       question_number: "question %{q_number}/%{q_count}"
       next: "Next"
       gist_question: "Send to the Gist"
+      progress: "Progress: "
   gists:
     create:
       failure: "Error!, try again later"

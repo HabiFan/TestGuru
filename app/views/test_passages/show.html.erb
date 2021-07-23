@@ -1,5 +1,13 @@
 <h1><%= t('.header', title: @test_passage.test.title) %></h1>
-
+<div id="progress_bar">
+  <div class="progress">
+    <div class="progress-bar bg-info" role="progressbar"></div>
+  </div>
+  <h3>
+    <%= t('.progress') %> 
+    <%= content_tag :b, "0 %", class: "progress-bar-value text-success", data: { current_question_number: @test_passage.current_question_number(@test_passage.current_question), questions_number: @test_passage.test.questions.size } %> 
+  </h3>
+</div>
 <b>
   <%= show_number_question(@test_passage.current_question) %>:
   <%= @test_passage.current_question.body %>
