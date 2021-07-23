@@ -4,9 +4,13 @@
   <%= link_to t('.new_test'), new_admin_test_path, class: 'btn btn-primary' %>
 </p>
 
-<table class="table table-bordered mt-2">
+<table class="table table-bordered mt-2", id="test_table">
   <tr>
-    <th><%= t('.test') %></th>
+    <th class ="sort-by-title pointer">
+      <%= t('.test') %>
+      <%= octicon 'arrow-up', class: 'text-succes hide' %>
+      <%= octicon 'arrow-down', class: 'text-succes hide' %>
+    </th>
     <th><%= t('.level') %></th>
     <th><%= t('.count_questions') %></th>
     <th colspan="4"><%= t('.actions') %></th>
