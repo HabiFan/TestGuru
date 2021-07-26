@@ -1,5 +1,5 @@
 class FeedBackMailer < ApplicationMailer
-  ADMIN_EMAIL = 'admin@fcloud.ru'
+  ADMIN_EMAIL = 'test.guru122@gmail.com'
 
   def create(message)
     @message = message
