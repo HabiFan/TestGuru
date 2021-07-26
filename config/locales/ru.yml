@@ -53,6 +53,7 @@ ru:
     footer:
       info: "Проект проходження теста"
       school_info: "Начальний проект в онлайн-школы Thinknetica"
+      feedback: "Напишите нам"
     admin:
       html_title: "Панель администратора"
   admin:
@@ -139,4 +140,12 @@ ru:
     test:
       test_title: "Тест %{title}"
       start: "Старт"
+  feed_back:
+    index:
+      contact: "Напишите нам"
+      send: "Отправить"
+      back: "Назад"
+      message: "Введите сообщение"
+    create:
+      success: 'Сообщение отправлено!'
 
