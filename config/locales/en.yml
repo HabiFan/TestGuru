@@ -59,8 +59,9 @@ en:
       destroy:
         deleted: "Question was deleted"
     tests:
-      form:
+      new:
         create_test: "Create new test"
+      edit:
         edit_test: "Edit test"
       form_inline:
         submit: "OK"
