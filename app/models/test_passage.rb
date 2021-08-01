@@ -8,7 +8,10 @@ class TestPassage < ApplicationRecord
   before_validation :before_validation_set_first_question, on: :create
   before_validation :before_validation_set_next_question, on: :update
 
+  scope :succeeded, -> { where(succeeded: true) }
   scope :by_level, ->(level) { joins(:test).where(tests: { level: level }) }
+  scope :in_category, ->(category) { joins(:test).where(tests: { category_id: category.id }) }
+
 
   def current_question_number(current_question)
     test.questions.order(:id).pluck(:id).index(current_question.id) + 1
@@ -47,11 +50,18 @@ class TestPassage < ApplicationRecord
     current_question.answers.correct
   end
 
+  def after_complete(question)
+    self.succeeded = successfull? if question.nil?
+  end
+
+
   def next_question
     test.questions.order(:id).where('id > ?', current_question.id).first
   end
 
   def before_validation_set_next_question
+    after_complete(next_question)
     self.current_question = next_question
+    
   end
 end

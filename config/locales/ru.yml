@@ -20,6 +20,7 @@ ru:
       answer: "Ответ"
       question: "Вопрос"
       test: "Тест"
+      badge: "Бейдж"
     attributes:
       answer:
         body: "Ответ"
@@ -36,6 +37,10 @@ ru:
         email: "Почта"
         password: "Пароль"
         remember_me: "Запомнить меня"
+      badge:
+        name: "Название"
+        image: "Изображение"
+        rule: "Правило"
   helpers:
     submit:
       test:
@@ -50,7 +55,7 @@ ru:
         
   show: "Просмотр"
   edit: "Редактировать"
-  new: "Создать"
+  new: "Создать"  
   update: "Обновить"
   delete: "Удалить"
   sure?: "Вы действительно хотите удалить?"
@@ -63,6 +68,7 @@ ru:
     all_tests: "Все тесты"
     welcome: "Добро пожалывать"
     admin_title: "Панель администратора"
+    badges: "Значки"
   layouts:
     footer:
       info: "Проект проходження теста"
@@ -119,6 +125,27 @@ ru:
         new_question: "Новый вопрос"
         body: "Вопрос"
         actions: "Действия"
+    badges:
+      new:
+        create_badge: "Новый бейдж"
+      edit:
+        edit_badge: "Редактировать бейдж"
+      create:
+        success: "Бейдж %{title} успешно создан!"
+        submit: "Создать"
+      update:
+        success: "Бейдж успешно обновлен!"
+      destroy:
+        success: "Бейдж %{title} успешно удален"
+      index:
+        title: "Список бейджов"
+        name: "Название"
+        image: "Изображение"
+        rule: "Правило"
+        actions: "Действия"
+        new_badge: "Новий бейдж"
+      show:
+        title: "Бейдж %{badge_name}"
   shared:
     errors:
       header:
@@ -133,6 +160,8 @@ ru:
       test_passed: "Тест пройдено"
       test_failed: "Тест не пройден"
       all_tests: "Все тесты"
+    update:
+      you_received_badges: "Вы получили бейдж: %{names}!"
     show:
       header: "Проходжение теста %{title}"
       question_number: "вопрос %{q_number}/%{q_count}"
@@ -163,4 +192,11 @@ ru:
       message: "Введите сообщение"
     create:
       success: 'Сообщение отправлено!'
+  badges:
+    index:
+      title: "Доступные бейджи"
+      count: "Мои бейджи"
+      name: "Название"
+      image: "Изображение"
+      rule: "Правило"
 
