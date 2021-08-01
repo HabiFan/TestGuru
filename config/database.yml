@@ -15,10 +15,7 @@
 # gem 'pg'
 #
 default: &default
-  adapter: postgresql
-  host: localhost
-  username: postgres
-  password: pass21
+  adapter: postgresql 
   encoding: unicode
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
@@ -26,6 +23,9 @@ default: &default
 
 development:
   <<: *default
+  username: postgres
+  password: pass21
+  host: localhost
   database: testguru_development
 
   # The specified database role being used to connect to postgres.
@@ -85,5 +85,4 @@ test:
 production:
   <<: *default
   database: testguru_production
-  username: testguru
-  password: <%= ENV['TESTGURU_DATABASE_PASSWORD'] %>
+

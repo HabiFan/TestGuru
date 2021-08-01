@@ -15,7 +15,7 @@ ru:
         less_than_or_equal_to: "может иметь значение меньшее или равное %{count}"
         present: "нужно оставить пустым"
         required: "не может отсутствовать"
-
+  
     models:
       answer: "Ответ"
       question: "Вопрос"
@@ -36,15 +36,29 @@ ru:
         email: "Почта"
         password: "Пароль"
         remember_me: "Запомнить меня"
+  helpers:
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Обновить тест"
+      question:
+        create: "Создать вопрос"
+        update: "Обновить вопрос"
+      answer:
+        create: "Создать ответ"
+        update: "Обновить ответ"
+        
   show: "Просмотр"
   edit: "Редактировать"
+  new: "Создать"
+  update: "Обновить"
   delete: "Удалить"
   sure?: "Вы действительно хотите удалить?"
   back: "Назад"
   logout: "Выход"
   sign_up: "Регистрация"
   login: "Вход"
-  gist_description: 'Вопрос %{title} с TestGur'
+  gist_description: 'Вопрос %{title} с TestGuru'
   navbar:
     all_tests: "Все тесты"
     welcome: "Добро пожалывать"
@@ -53,6 +67,7 @@ ru:
     footer:
       info: "Проект проходження теста"
       school_info: "Начальний проект в онлайн-школы Thinknetica"
+      feedback: "Напишите нам"
     admin:
       html_title: "Панель администратора"
   admin:
@@ -76,9 +91,10 @@ ru:
       destroy:
         deleted: "Вопрос удачно удален"
     tests:
-      form:
+      new:
         create_test: "Новый тест"
-        edit_test: "Редактирование теста"
+      edit:
+        edit_test: "Редактирование теста %{title}"
       form_inline:
         submit: "OK"
       test:
@@ -139,4 +155,12 @@ ru:
     test:
       test_title: "Тест %{title}"
       start: "Старт"
+  feed_back:
+    index:
+      contact: "Напишите нам"
+      send: "Отправить"
+      back: "Назад"
+      message: "Введите сообщение"
+    create:
+      success: 'Сообщение отправлено!'
 

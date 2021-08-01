@@ -14,8 +14,6 @@ class User < ApplicationRecord
   has_many :authored_tests, class_name: 'Test', foreign_key: 'author_id', dependent: :destroy
   has_many :gists, dependent: :destroy
 
-  validates :first_name, :last_name, presence: true
-  
   def level_by_tests(level)
     test_passages.by_level(level)
   end

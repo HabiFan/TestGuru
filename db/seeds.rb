@@ -7,9 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create!([
-  { email: 'moderator@test.com', password: 'pass987$' },
-  { email: 'user_1@test.com', password: 'pass12#' },
-  { email: 'user_2@test.com', password: 'pass27#' }
+  { first_name: 'Igor', last_name: 'Ivanov', email: 't_guru@list.ru', password: 'pass987' },
+  { first_name: 'Vika', last_name: 'Sidorova', email: 'vika1980@list.ru', password: 'pass12' },
+  { first_name: 'Anton', last_name: 'Kipa', email: 'anton12@list.ru', password: 'pass27' }
 ])
 
 moderator = User.first
