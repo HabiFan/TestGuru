@@ -15,10 +15,11 @@ User.create!([
 moderator = User.first
 
 categories = Category.create!([
-                               { title: 'Информатика' },
-                               { title: 'Языки програмирования' },
-                               { title: 'Операционные системы' }
+                                { title: 'Frontend' },
+                                { title: 'Backend' },
+                                { title: 'Mobile' }
                              ])
+
 tests = Test.create!([
                       { title: 'Информатика, Информационные технологии', category: categories[0], author: moderator },
                       { title: 'Аппаратное обеспечение ЭВМ', level: 1, category: categories[0], author: moderator },
@@ -80,3 +81,12 @@ Answer.create!([
                 { body: 'одной из оболочек операционной системы MS DOS', correct: true, question: questions[8] },
                 { body: 'текстового редактора', question: questions[8] }
               ])
+BadgeRule.create!([
+                   { name: 'Successful passing of all frontend tests', kind: 1, value: categories[0].id },
+                   { name: 'Successful passing of all backend tests', kind: 1, value: categories[1].id },
+                   { name: 'Successful passing of all mobile tests', kind: 1, value: categories[2].id },
+                   { name: 'Successful passing of all level 1 tests', kind: 2, value: 1 },
+                   { name: 'Successful passing of all level 2 tests', kind: 2, value: 2 },
+                   { name: 'Successful passing of all level 3 tests', kind: 2, value: 3 },
+                   { name: 'Successfully passing the test on the first try', kind: 0, value: 0 }
+                  ])

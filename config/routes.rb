@@ -32,6 +32,7 @@ Rails.application.routes.draw do
       end
     end
     resources :gists, only: :index
+    resources :badges
 
     root 'tests#index'
   end
@@ -39,4 +40,6 @@ Rails.application.routes.draw do
   resources :gists, only: :create
 
   resources :feed_back, only: %i[index create]
+  resources :badges, only: :index
+
 end

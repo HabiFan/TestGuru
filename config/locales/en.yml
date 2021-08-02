@@ -13,6 +13,7 @@ en:
     all_tests: "All tests"
     welcome: "Welcome"
     admin_panel: "Admin-Panel"
+    badges: "Badges"
   layouts:
     footer:
       info: "Project where you can pass the tests"
@@ -96,6 +97,8 @@ en:
       next: "Next"
       gist_question: "Send to the Gist"
       progress: "Progress: "
+    update:
+      you_received_badges: "You have received badges: %{names}!"
   gists:
     create:
       failure: "Error!, try again later"
@@ -110,6 +113,28 @@ en:
     test:
       test_title: "Test %{title}"
       start: "Start"
+  badges:
+      form:
+        create_badge: "Create new badge"
+        edit_badge: "Edit badge"
+      create:
+        success: "Badge %{title} was created!"
+      update:
+        success: "Badge was updated!"
+      destroy:
+        success: "Badge %{title} was destroyed"
+      index:
+        title: "Badges list"
+        name: "Name"
+        image: "Image"
+        rule: "Rule"
+        actions: "Actions"
+        new_badge: "New badge"
+      show:
+        title: "Badge %{badge_name}"
+      index:
+        title: "Available badges"
+        count: "My badges"
   feed_back:
     index:
       contact: "Contact us"
