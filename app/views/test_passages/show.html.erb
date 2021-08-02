@@ -1,4 +1,10 @@
 <h1><%= t('.header', title: @test_passage.test.title) %></h1>
+<% if @test_passage.lasting %>
+   <div class="alert alert-info d-flex align-items-center flex-column">
+     <%= t(".time_remaining") %>
+     <div class="clock" data-end-time="<%= @test_passage.timer_end_time %>" data-passing-test-id="<%= @test_passage.id %>"></div>
+   </div>
+ <% end %>
 <div id="progress_bar">
   <div class="progress">
     <div class="progress-bar bg-info" role="progressbar"></div>

@@ -35,6 +35,8 @@ en:
       test:
         title: "Name"
         category_id: "Category"
+        level: "Level"
+        lasting: "Lasting"
       user:
         email: "Email"
         password: "Password"
@@ -97,6 +99,7 @@ en:
       next: "Next"
       gist_question: "Send to the Gist"
       progress: "Progress: "
+      time_remaining: "Time Remaining"
     update:
       you_received_badges: "You have received badges: %{names}!"
   gists:

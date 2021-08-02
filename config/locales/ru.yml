@@ -31,6 +31,7 @@ ru:
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
+        lasting: "Время для прохождения (в минутах)"
       user:
         first_name: "Фамилия"
         last_name: "Имя"
@@ -168,6 +169,7 @@ ru:
       next: "Дальше"
       gist_question: "Отправить на gist"
       progress: "Прогресс: "  
+      time_remaining: "Осталость"
   gists:
     create:
       success: "Gist создан!"
