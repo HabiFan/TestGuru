@@ -12,6 +12,8 @@ import "utilities/sortign"
 import "utilities/password_confirmation"
 import "utilities/form_inline"
 import "utilities/progress_bar"
+import "jquery-countdown/dist/jquery.countdown"
+import "utilities/timer"
 
 
 Rails.start()

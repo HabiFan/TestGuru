@@ -12,6 +12,18 @@ class TestPassage < ApplicationRecord
   scope :by_level, ->(level) { joins(:test).where(tests: { level: level }) }
   scope :in_category, ->(category) { joins(:test).where(tests: { category_id: category.id }) }
 
+  def lasting
+    @lasting ||= test.lasting
+  end
+
+  def timer_end_time
+    created_at + lasting.minutes if lasting
+  end
+
+  def time_end?
+    test.timer? && Time.current > timer_end_time
+  end
+
 
   def current_question_number(current_question)
     test.questions.order(:id).pluck(:id).index(current_question.id) + 1
@@ -22,7 +34,7 @@ class TestPassage < ApplicationRecord
   end
 
   def completed?
-    current_question.nil?
+    current_question.nil? || time_end?
   end
 
   def successfull?

@@ -26,4 +26,9 @@ class Test < ApplicationRecord
       by_category(title).pluck(:title)
     end
   end
+
+  def timer?
+    lasting.present?
+  end
+
 end

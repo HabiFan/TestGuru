@@ -13,7 +13,7 @@ class TestPassagesController < ApplicationController
     @test_passage.accept!(params[:answer_ids])
     if @test_passage.completed?
       flash_message = {}
-      if @test_passage.successfull?
+      if @test_passage.successfull? 
         result = BadgeCheckService.new(current_user, @test_passage).call
         flash_message = { notice: t(".you_received_badges", names: result.join(', ')) } if result.present?
       end

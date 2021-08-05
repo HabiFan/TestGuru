@@ -16,6 +16,11 @@
       <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true, class: 'form-control' %>
     </p>
 
+    <p>
+      <%= form.label :lasting %>
+      <%= form.number_field :lasting, class: 'form-control' %>
+    </p>
+
     <p><%= form.submit class: 'btn btn-primary' %></p>
   </div>
 <% end %>
