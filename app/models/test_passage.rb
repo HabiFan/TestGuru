@@ -34,7 +34,7 @@ class TestPassage < ApplicationRecord
   end
 
   def completed?
-    current_question.nil?
+    current_question.nil? || time_end?
   end
 
   def successfull?

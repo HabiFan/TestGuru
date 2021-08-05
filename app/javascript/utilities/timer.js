@@ -6,7 +6,8 @@ document.addEventListener("turbolinks:load", function() {
         event.strftime('%M:%S')
       );
     }).on('finish.countdown', function() {
-      window.location = '/passing_tests/' + clock.dataset.passingTestId + '/result'
+      $(".submit-button")[0].click()
     });
   }
 }) 
+

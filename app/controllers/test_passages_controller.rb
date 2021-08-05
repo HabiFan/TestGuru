@@ -11,7 +11,7 @@ class TestPassagesController < ApplicationController
 
   def update
     @test_passage.accept!(params[:answer_ids])
-    if @test_passage.completed? || @test_passage.time_end?
+    if @test_passage.completed?
       flash_message = {}
       if @test_passage.successfull? 
         result = BadgeCheckService.new(current_user, @test_passage).call
